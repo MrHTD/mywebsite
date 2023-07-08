@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+#logo {
+  font-size: 50px;
+  font-weight: 800;
+  color: #000c14;
+}
+
+#logo>span {
+  color: #f8002f;
+}
+
+.nav-item>.nav-link {
+  color: #000c14;
+}
+
+.nav-item>.nav-link:hover {
+  color: #f8002f !important;
+}
+
+.active{
+  color: #f8002f!important;
+}
+
+.active>.page-link {
+  color: white!important;
+  background-color: #f8002f!important;
+  border: none!important;
+}
+
+.page-link {
+  color: #f8002f!important;
+  box-shadow: none!important;
+}
+
+.icon {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.fa-user{
+    color: #f8002f;
+}
+
+.display-1{
+    font-size: 8rem!important;
+}
+
+label{
+    font-weight: 700;
+    color: #f8002f;
+}
+
+form > .form-group > input ,select, textarea{
+    border-radius: 8px !important;
+    color: #f8002f!important;
+    box-shadow: none!important;
+}
+
+h2{
+    color: #f8002f;
+}
+
+.btn {
+    background: #f8002f !important;
+    color: #fff!important;
+    border-radius: 10px !important;
+    border: 1px solid #f8002f!important;
+    font-weight: 700!important;
+}
+
+.btn-login:hover {
+    background: #f8002f !important;
+    color: #fff!important;
+    scale: 1.01;
+    border: 1px solid black !important;
+}
+
+.table{
+  border-radius: 50%!important;
+}
+
+table > tbody{
+  font-size: 16px;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td
+{
+  background-color: #000c14!important;
+  color: white!important;
+  overflow: hidden;
+
+}
+
+.table-striped>tbody>tr:nth-child(even)>td
+{
+  background-color: #000c14!important;
+  color: white!important; 
+}
+
+.table-striped>thead>tr:nth-child(odd)>th
+{
+  background-color: #f8002f!important;
+  color: white!important;
+}
+
+.form-check-input:checked {
+  background-color: red!important;
+  border-color: red!important;
+}
