@@ -14,7 +14,6 @@ $page = $_SERVER['HTTP_HOST'];
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./css/style.css" rel="stylesheet">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link href="./admin/upload/icon.png" rel="icon">
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
@@ -27,7 +26,7 @@ $page = $_SERVER['HTTP_HOST'];
             <a class="navbar-brand" id="logo" href="<?php echo $hostname; ?>">GAMES <span>HEAVEN</span></a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon bg-danger" style="color: red!important;"></span>
+                <span class="navbar-toggler-icon bg-light"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -133,10 +132,10 @@ $page = $_SERVER['HTTP_HOST'];
 
     <!-- playlist Search -->
     <div class="collapse" id="collapseExample1">
-        <form action="playlist_search.php" method="GET">
+        <form class="" action="playlist_search.php" method="GET">
             <div class="text-center mt-2 border-0 mx-auto w-50 input-group">
-                <input type="search" name="search1" class="form-control py-3 rounded border-0" placeholder="Search">
-                <button type="submit" class="btn rounded-start-0 border-0 px-3" id="search_btn"><i style="color: aliceblue!important;" class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="search" name="search1" class="form-control rounded border-0" placeholder="Search">
+                <button type="submit" class="btn ms-2 border-0" id="search_btn">Search</button>
             </div>
         </form>
     </div>

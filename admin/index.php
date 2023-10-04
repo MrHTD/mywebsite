@@ -4,8 +4,8 @@
 
 include "../config.php";
 
-session_start();
 if (isset($_SESSION["username"])) {
+  session_start();
   header("Location: {$hostname}/admin/user.php");
 }
 
@@ -31,15 +31,14 @@ if (isset($_SESSION["username"])) {
     <img src="./upload/footer.png" class="img-thumbnail border-0 mx-auto" width="150" alt="">
 </div>
   <div class="container d-flex justify-content-center align-items-center mt-2">
-    <div class="p-5 rounded-4  border" style="width: 550px;">
+    <div class="p-5 rounded-4 shadow-lg border" style="width: 550px;">
 
       <h2 class="fw-bold">Admin</h2>
       <!-- Form Start -->
       <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" class="form-horizontal needs-validation" novalidate>
-
-      <label for="validationCustom02" class="form-label">Username</label>
-        <div class="form-group mb-3 shadow-lg rounded-4">
-          <input type="text" name="username" class="form-control py-3 px-4 rounded-4" id="validationCustom02"
+        <div class="form-group my-3">
+          <label for="validationCustom02" class="form-label">Username</label>
+          <input type="text" name="username" class="form-control form-control-lg" id="validationCustom02"
             placeholder="Username" required>
           <div class="invalid-feedback">
             Please Enter a username.
@@ -48,10 +47,9 @@ if (isset($_SESSION["username"])) {
             Looks good!
           </div>
         </div>
-
-        <label for="validationCustom02" class="form-label">Password</label>
-        <div class="form-group mb-3 shadow-lg rounded-4">
-          <input type="password" name="password" class="form-control py-3 px-4 rounded-4" id="validationCustom02"
+        <div class="form-group my-3">
+          <label for="validationCustom02" class="form-label">Password</label>
+          <input type="password" name="password" class="form-control form-control-lg" id="validationCustom02"
             placeholder="Password" required>
           <div class="invalid-feedback">
             Please Enter a password.
@@ -60,9 +58,8 @@ if (isset($_SESSION["username"])) {
             Looks good!
           </div>
         </div>
-
-        <div class="text-center align-items-left">
-          <input type="submit" name="login" class="btn btn-lg btn-login btn-default w-100 py-3" value="LOGIN" />
+        <div class="text-center">
+          <input type="submit" name="login" class="btn btn-lg btn-login btn-default col-12" value="L O G I N" />
         </div>
       </form>
 

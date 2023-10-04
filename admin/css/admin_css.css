@@ -34,7 +34,6 @@
 
 .page-link {
   color: #f8002f!important;
-  box-shadow: none!important;
 }
 
 .icon {
@@ -58,8 +57,11 @@ label{
 
 form > .form-group > input ,select, textarea{
     border-radius: 8px !important;
+    border: 1px solid #f8002f!important;
     color: #f8002f!important;
-    box-shadow: none!important;
+}
+form > .form-group > input:active{
+  box-shadow: red!important;
 }
 
 h2{
@@ -78,7 +80,7 @@ h2{
     background: #f8002f !important;
     color: #fff!important;
     scale: 1.01;
-    border: 1px solid black !important;
+    border: double black !important;
 }
 
 .table{

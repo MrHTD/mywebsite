@@ -67,7 +67,7 @@ include_once "header.php";
                             <span><i class="fa-solid fa-clock mx-1"></i><?php echo $row['post_date']; ?></span>
                         </small>
                     </div>
-                    <div class="col-lg-12 col-md-12 mx-auto col-sm-auto">
+                    <div class="col-lg-12 col-md-12 mx-auto col-sm-auto"
                             <div class="clearfix"> 
                                 <img src="./admin/upload/<?php echo $row['post_img']; ?>." class="img-fluid col-md-6 float-md-start mb-3 me-3 rounded-3" alt="...">
                                 <?php echo $row['description']; ?>

@@ -10,9 +10,9 @@ include "header.php";
 
 <body>
 
-    <div class="col-md-9 m-auto col-lg-6 shadow-lg px-5 py-5 my-3 rounded-3">
+    <div class="col-lg-10 col-md-10 col-sm-8 col-10 offset-lg-1 offset-md-1 offset-sm-3 offset-1">
 
-        <h2 class="text-center fw-bold">EDIT POST</h2>
+        <h2 class="text-center mt-5 fw-bold">EDIT POST</h2>
 
         <?php
 
@@ -44,12 +44,12 @@ include "header.php";
                     </div>
                     <div class="form-group my-3">
                         <label>Description</label>
-                        <textarea name="postdesc" rows="10" class="form-control"
+                        <textarea name="postdesc" rows="20" class="form-control"
                             id="tiny"><?php echo $row['description'] ?></textarea>
                     </div>
-                    <div class="form-group my-3">
+                    <div class="form-group my-3 offset-4">
                         <label>Category</label>
-                        <select name="category" class="form-select mx-auto" aria-label="Default select example"
+                        <select name="category" class="form-select w-50" aria-label="Default select example"
                             value="<?php echo $row['category_name'] ?>">
                             <option selected disabled> Select Category</option>
                             <?php
@@ -73,16 +73,16 @@ include "header.php";
                             ?>
                         </select>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group offset-4">
                         <label>Upload image</label>
-                        <div class="my-3 col-6">
+                        <div class="col-5 my-3">
                             <img src="upload/<?php echo $row['post_img'] ?>" class="img-fluid rounded">
                         </div>
-                        <input type="file" name="new_img" class="form-control">
+                        <input type="file" name="new_img" class="form-control w-50">
                         <input type="hidden" name="old_img" value="<?php echo $row['post_img'] ?>">
                     </div>
                     <div class="my-3 text-center">
-                        <input type="submit" name="upd_post" class="btn btn-login btn-danger btn-default w-100"
+                        <input type="submit" name="upd_post" class="btn btn-login btn-danger btn-default w-50"
                             value="Update Post" />
                     </div>
                 </form>
@@ -101,6 +101,9 @@ include "header.php";
             statusbar: false,
             selector: 'textarea#tiny',
             content_style: "*{margin: 0px;}",
+            toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
+                'alignleft aligncenter alignright alignjustify | ' +
+                'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
         })
     </script>
 

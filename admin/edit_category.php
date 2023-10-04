@@ -19,7 +19,7 @@ $title = "Edit-Category";
 
 <body>
 
-    <div class="col-lg-4 col-md-10 col-sm-auto mx-auto">
+    <div class="col-lg-6 col-md-10 offset-3">
 
         <h2 class="text-center mt-5 fw-bold">EDIT CATEGORY</h2>
         <?php
@@ -40,10 +40,10 @@ $title = "Edit-Category";
                     <div class="form-group my-3">
                         <input type="hidden" name="category_id" value="<?php echo $row['category_id'] ?>">
                         <label>Category Name</label>
-                        <input type="text" name="category_name" class="form-control py-3" value="<?php echo $row['category_name'] ?>" required>
+                        <input type="text" name="category_name" class="form-control py-2" value="<?php echo $row['category_name'] ?>" required>
                     </div>
                     <div class="my-3 text-center">
-                        <input type="submit" name="upd_category" class="btn btn-login btn-danger btn-default w-100 py-3" value="Update Category" />
+                        <input type="submit" name="upd_category" class="btn btn-login btn-danger btn-default col-12" value="Update Category" />
                     </div>
                 </form>
 

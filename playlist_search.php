@@ -48,7 +48,7 @@ include "header.php";
                 }
             }
         } else {
-            echo "No records";
+            echo "NO records";
         }
         ?>
 

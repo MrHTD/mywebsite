@@ -105,8 +105,6 @@ include "header.php";
             <!-- pagination start -->
             <?php
 
-            $total_page = 0;
-
             $sql1 = "SELECT * FROM `post`";
 
             $result1 = mysqli_query($conn, $sql1) or die("Query Failed.");
@@ -120,7 +118,7 @@ include "header.php";
                 echo '<ul class="pagination justify-content-center">';
 
                 if ($page > 1) {
-                    echo '<li class="page-item"><a class="page-link shadow-lg shadow-lg border me-1 rounded-3" href="post.php?page=' . ($page - 1) . '">Previous</a></li>';
+                    echo '<li class="page-item"><a class="page-link border-0 rounded" href="post.php?page=' . ($page - 1) . '">Previous</a></li>';
                 }
 
                 for ($i = 1; $i <= $total_page; $i++) {
@@ -129,11 +127,11 @@ include "header.php";
                     } else {
                         $active = "";
                     }
-                    echo '<li class="page-item ' . $active . '"><a class="page-link shadow-lg border me-1 rounded-3 px-4" href="post.php?page=' . $i . '">' . $i . '</a></li>';
+                    echo '<li class="page-item ' . $active . '"><a class="page-link border-0 rounded px-4" href="post.php?page=' . $i . '">' . $i . '</a></li>';
                 }
             }
             if ($total_page > $page) {
-                echo '<li class="page-item"><a class="page-link shadow-lg border me-1 rounded-3" href="post.php?page=' . ($page + 1) . '">Next</a></li>';
+                echo '<li class="page-item"><a class="page-link border-0 rounded" href="post.php?page=' . ($page + 1) . '">Next</a></li>';
             }
 
             echo '</ul>';

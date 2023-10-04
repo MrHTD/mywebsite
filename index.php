@@ -76,8 +76,7 @@ include 'header.php';
                 }
 
                 // pagination
-                $total_page = 0;
-                
+
                 $sql1 = "SELECT * FROM `post`";
 
                 $result1 = mysqli_query($conn, $sql1) or die("Query Failed.");
