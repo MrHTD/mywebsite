@@ -32,7 +32,7 @@ include "header.php";
     ?>
 
             <div class="card 1 my-5">
-                <div class="card_image"> <img src="./images/<?php echo $row['playlist_image']; ?>" /> </div>
+                <div class="card_image"> <img src="./admin/upload/<?php echo $row['playlist_image']; ?>" /> </div>
                 <div class="card_title">
                     <h5 class="mb-0 fs-5 btn w-100 mx-auto border-0" id="some-element"><b><?php echo $row['playlist_name']; ?></b></h5>
                     <a href="<?php echo $row['playlist_url']; ?>" class="stretched-link"></a>

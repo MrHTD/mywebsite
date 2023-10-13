@@ -31,7 +31,7 @@ include "header.php";
 
           <div class="form-group my-3">
             <label>YouTube Playlist Date</label>
-            <input type="datetime-local" name="playlist_date" class="form-control py-2" placeholder="" required>
+            <input type="date" name="playlist_date" class="form-control py-2" placeholder="" required>
           </div>
 
           <div class="form-group my-3">

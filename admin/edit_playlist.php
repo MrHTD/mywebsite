@@ -55,7 +55,7 @@ $title = "Edit-Post";
                     </div>
                     <div class="form-group my-3">
                         <label>YouTube Playlist Date</label>
-                        <input type="datetime-local" name="playlist_date" class="form-control py-2" placeholder="" value="<?php echo $row['playlist_date'] ?>" required>
+                        <input type="date" name="playlist_date" class="form-control py-2" placeholder="" value="<?php echo $row['playlist_date'] ?>" required>
                     </div>
                     <div class="form-group my-3">
                         <label>YouTube Playlist URL</label>

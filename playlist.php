@@ -30,11 +30,11 @@ include_once "header.php";
 
                         <div class="slider-card border">
                             <div class="d-flex justify-content-center align-items-center mx-2 mx-md-3 my-3">
-                                <img src="./images/<?php echo $row['playlist_image']; ?>" class="img-fluid" alt="">
+                                <img src="./admin/upload/<?php echo $row['playlist_image']; ?>" class="img-fluid" alt="">
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="mb-0"><b><?php echo $row['playlist_name']; ?></b></h5>
-                                <p class="p-2"><small class="text-muted">Last Updated: <?php echo $row['playlist_date']; ?></small></p>
+                                <p class="p-2"><small class="text-muted text-uppercase">Playlist Created: <?php echo $row['playlist_date']; ?></small></p>
                                 <a href="<?php echo $row['playlist_url']; ?>" class="btn btn-play mb-4 px-5 stretched-link">View Playlist</a>
                             </div>
                         </div>
