@@ -34,6 +34,7 @@ include "header.php";
                 <thead>
                     <tr>
                         <th>S. NO</th>
+                        <th>IMAGE</th>
                         <th>TITLE</th>
                         <th>DATE</th>
                         <th>EDIT</th>
@@ -50,7 +51,12 @@ include "header.php";
                     ?>
                         <tr>
                             <td><?php echo $row['playlist_id'] ?></td>
-                            <td><?php echo $row['playlist_name'] ?></td>
+                            <td>
+                                <img src="./upload/<?php echo $row['playlist_image']; ?>" class="img-fluid rounded" alt="" width="50">
+                            </td>
+                            <td>
+                                <?php echo $row['playlist_name'] ?>
+                            </td>
                             <td><?php echo $row['playlist_date'] ?></td>
                             <td>
                                 <a href="edit_playlist.php?id=<?php echo $row['playlist_id'] ?>" class="btn btn-login" style="border: none!important;"><i class="fa-solid fa-pen-to-square"></i></a>
