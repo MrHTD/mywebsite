@@ -9,12 +9,6 @@ services:
     volumes:
       - ./html:/var/www/html #this line maps the content of ./html in your pc to the /var/www/html of the containero
       - ./nginx:/etc/nginx/conf.d
-
-  php:      
-    image: php:8.2-apache    
-    volumes:  
-      - ./html:/var/www/html
-
   db:
     image: mysql #check the mysql version you need for your project
     environment:
