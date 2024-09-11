@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  nginx:
+    image: nginx 
+    ports:
+      - 80:80 #this line maps your pc port to the container port
+    depends_on:
+      - php #this line links this container to the db container
+    volumes:
+      - ./html:/var/www/html #this line maps the content of ./html in your pc to the /var/www/html of the containero
+      - ./nginx:/etc/nginx/conf.d
+
+  php:      
+    image: php:8.2-apache    
+    volumes:  
+      - ./html:/var/www/html
+
+  db:
+    image: mysql #check the mysql version you need for your project
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mywebsite #you can change the database name here
+    volumes:
+      - ./mysql_data:/var/lib/mysql #this line maps the content of ./mysql_data in your pc to the /var/lib/mysql of the container
