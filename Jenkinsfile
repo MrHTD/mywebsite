@@ -1,24 +1,55 @@
 pipeline {
-  agent any
-  environment{
-      staging_server="192.168.100.97"
-  }
-  stages {
-    stage('Deploy to Remote'){
-           steps{
-              sh '''
-                  for fileName in `find ${WORKSPACE} -type f -mmin -10 | grep -v ".git" | grep -v "Jenkinsfile"`
-                  do
-                       fil=$(echo ${fileName} | sed 's/'"${JOB_NAME}"'/ /' | awk {'print $2'})
-                      scp -r ${WORKSPACE}${fil} vbox@${staging_server}:/var/www/lamp${fil}
-                  done
-              '''
-          }
+    agent any
+
+    stages {
+        stage('Clone Repository') {
+            steps {
+                // Clone your repository containing the Dockerfile and application code
+                git 'https://github.com/MrHTD/mywebsite.git'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    // Build the Docker image using the Dockerfile
+                    sh 'docker build -t lamp-stack-app:latest .'
+                }
+            }
+        }
+
+        stage('Run Docker Container') {
+            steps {
+                script {
+                    // Stop and remove any existing container
+                    sh '''
+                    docker stop lamp_container || true
+                    docker rm lamp_container || true
+                    '''
+
+                    // Run the Docker container in detached mode
+                    sh 'docker run -d --name lamp_container -p 80:80 lamp-stack-app:latest'
+                }
+            }
+        }
+
+        stage('Post-Deployment') {
+            steps {
+                echo 'Deployment completed successfully.'
+            }
+        }
     }
-    stage ('Run Docker Compose') {
-      steps{
-        sh 'sudo docker-compose up -d'
-      }
+
+    post {
+        always {
+            // Cleanup: Remove unused Docker images and containers
+            sh 'docker system prune -f'
+        }
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed. Please check the logs.'
+        }
     }
-  }
 }
