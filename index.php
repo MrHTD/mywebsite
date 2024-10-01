@@ -15,6 +15,7 @@ include 'header.php';
 
         <div class="row">
 
+
             <div class="col-lg-8 me-5 col-md-7 col-sm-auto">
 
                 <h1 class="text-center mt-4 mb-4" style="color: #f8002f!important;"><b>Latest</b></h1>
